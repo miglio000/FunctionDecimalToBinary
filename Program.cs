@@ -26,7 +26,7 @@ namespace FunctionDecimalToBinary
             int ToBase;
             Console.WriteLine("In quale base vuoi convertire il numero decimale?");
             ToBase = Convert.ToInt32(Console.ReadLine());
-            string result = Convert.ToString(Convert.ToInt32(number, FromBase), ToBase);
+            string result = Convert.ToString(Convert.ToInt32(number, FromBase),ToBase).PadLeft(8,'0');
             Console.WriteLine($"The number in binary is {result}.");
         }
     }
